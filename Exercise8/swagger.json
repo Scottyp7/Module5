@@ -1,0 +1,52 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "My Fake Store",
+        "description": "A fake store with a list of products",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Fakestore",
+            "description": "API for Calculus in the system"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/Fakestore": {
+            "get": {
+                "tags": [
+                    "Json Data"
+                ],
+                "summary": "A list of projects from the FakeStore Api website",
+                "parameters": [
+                    {
+                        "id": "Place Number",
+                        "name": "Name",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A search function for an array of products"
+                    }
+                }
+            }
+        }
+
+
+}  }

@@ -34,4 +34,5 @@ class Calculator // calculator acts as a template to be called from other web pa
         return value
     }
 }
+
 module.exports = Calculator

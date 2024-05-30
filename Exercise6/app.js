@@ -1,12 +1,13 @@
-// app.js - new file at top level
 const express = require('express')
+const cors = require('cors')
 const app = express()
-const port = 3000
+const calRouter = require('./routes/calculatorRoutes')
 
-// map all routes to the express app
-const calculatorRoutes =
-require('./routes/calculatorRoutes');
-app.use('/calculator', calculatorRoutes);
 
-// export the app
-module.exports = app;
+app.use(express.json())
+app.use(cors())
+
+
+app.use('/Calculator', calRouter) // if route of request is '/calculator' it forwards the request to calRouter
+
+module.exports = app
